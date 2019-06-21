@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="./styles/mystyle.css">
+</head>
+
+<body>
+    <div id="app">
+        <h2>
+            Add todo
+        </h2>
+        <form @submit.prevent="addTodo">
+            <input v-model="newTodo" placeholder="Add todo">
+            <button>
+                Add the todo
+            </button>
+        </form>
+        <h2>Todos:</h2>
+        <ol>
+            <li v-for="todo in todos">
+                <label>
+                    <input type="checkbox" v-on:change="toggle(todo)" v-bind:checked="todo.done">
+
+                    <del v-if="todo.done">
+                        {{ todo.text }}
+                    </del>
+                    <span v-else>
+                        {{ todo.text }}
+                    </span>
+                </label>
+                <button @click="deleteTodo(todo)">
+                    &times;
+                </button>
+            </li>
+        </ol>
+    </div>
+</body>
+<script src="./scripts/vue.js"></script>
+<script src="./scripts/myVue.js"></script>
+
+</html>

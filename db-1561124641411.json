@@ -1,0 +1,19 @@
+{
+  "people": [
+    {
+      "id": 0,
+      "name": "John"
+    },
+    {
+      "id": 1
+    },
+    {
+      "name": "Camera",
+      "id": 2
+    },
+    {
+      "name": "Al",
+      "id": 4
+    }
+  ]
+}
